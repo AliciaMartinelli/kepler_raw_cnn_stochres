@@ -1,0 +1,6 @@
+.DS_Store
+raw
+dataset
+aug_dataset
+results
+nohup.out
