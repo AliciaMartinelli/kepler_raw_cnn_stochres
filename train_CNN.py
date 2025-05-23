@@ -42,12 +42,12 @@ def load_data():
 
         for gfile in global_files:
             gpath = os.path.join(global_folder, gfile)
-            lfile = gfile.replace('global', 'local')  # wichtig!
+            lfile = gfile.replace('global', 'local')
             lpath = os.path.join(local_folder, lfile)
 
             if not os.path.exists(lpath):
-                print(f"Warnung: passende Local-Datei nicht gefunden für {gfile}")
-                continue  # überspringen, wenn local fehlt
+                print(f"Not found: {gfile}")
+                continue
 
             X_global.append(np.load(gpath))
             X_local.append(np.load(lpath))
